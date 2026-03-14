@@ -43,6 +43,7 @@ extensions = [
     "sphinx.ext.todo",
     # Auto generate docs
     "autoapi.extension",
+    "sphinxcontrib.bibtex"
 ]
 
 # Support Markdown source files & rst for api docs
