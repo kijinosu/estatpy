@@ -13,7 +13,7 @@ requires = ["hatchling"]
 [project]
 name = "estatpy"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
-version = "v0.0.6-alpha-2"
+version = "v0.0.6-alpha-3"
 
 description = "A Python package for accessing Japanese government data on its e-Stat portal"
 authors = [
@@ -127,6 +127,10 @@ installer = "uv"
 # This table installs the tools you need to test and build your package
 [tool.hatch.envs.build]
 description = """Test the installation the package."""
+dependencies = [
+    "pip",
+    "twine",
+]
 features = [
     "build",
 ]
