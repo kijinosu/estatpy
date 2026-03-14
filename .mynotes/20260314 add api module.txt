@@ -16,3 +16,7 @@ I am still working from the pyOpenSci tutorial <https://www.pyopensci.org/python
     git commit -m "Add api.py module"
     git push origin tutorial5
 
+4) Merge tutorial5 into main and close tutorial5.
+
+5) Create new branch readme <https://github.com/kijinosu/estatpy/tree/readme>
+
