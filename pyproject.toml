@@ -13,14 +13,14 @@ requires = ["hatchling"]
 [project]
 name = "estatpy"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
-version = "v0.0.6-alpha-3"
+version = "v0.0.6-alpha-4"
 
 description = "A Python package for accessing Japanese government data on its e-Stat portal"
 authors = [
     { name = "Alan Engel", email = "kijinosu@proton.me" },
 ]
 license = "MIT"
-requires-python = ">= 3.10" # Adjust based on the minimum version of Python that you support
+requires-python = ">= 3.14" # Adjust based on the minimum version of Python that you support
 readme = {"file" = "README.md", "content-type" = "text/markdown"}
 # Please consult https://pypi.org/classifiers/ for a full list.
 classifiers = [
@@ -28,7 +28,7 @@ classifiers = [
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.14",
 ]
 # TODO: add keywords
 keywords = []
