@@ -20,3 +20,5 @@ I am still working from the pyOpenSci tutorial <https://www.pyopensci.org/python
 
 5) Create new branch readme <https://github.com/kijinosu/estatpy/tree/readme>
 
+There is already a project estatpy on pypi.org. Change name to estatjp.
+
