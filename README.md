@@ -28,7 +28,7 @@ To use estatjp in your code:
 
 ```yaml
 bibliography:
-  - bibliography.bib
+  - CITATIONS.bib
 
 ```
 
