@@ -26,3 +26,5 @@ There is already a project estatpy on pypi.org. Change name to estatjp.
 6) try adding bibliography per <https://github.com/mcmtroffaes/sphinxcontrib-bibtex/blob/develop/README.rst>
     pip install sphinxcontrib-bibtex
     Add config lines from <https://github.com/mcmtroffaes/sphinxcontrib-bibtex/blob/develop/pyproject.toml> to pyproject.toml
+
+sphinx-build -W -b html docs docs/_build
