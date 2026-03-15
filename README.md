@@ -1,3 +1,8 @@
+---
+bibliography: .pandoc/bibliography.bib
+csl: .pandoc/apa.csl
+---
+
 # estatjp
 
 See Higashi & Kurokawa (2024) for an introduction to non-standard
@@ -18,5 +23,3 @@ statistics 2024. *Annals of Gastroenterological Surgery*, *8*(6),
 </div>
 
 </div>
-
-> bibliography.bib

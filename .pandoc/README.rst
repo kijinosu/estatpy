@@ -9,4 +9,3 @@ References
 
 .. bibliography:: 
    :all:
-   bibliography.bib
