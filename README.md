@@ -1,8 +1,3 @@
----
-bibliography: .pandoc/bibliography.bib
-csl: .pandoc/apa.csl
----
-
 # estatjp
 
 See Higashi & Kurokawa (2024) for an introduction to non-standard
