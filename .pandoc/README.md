@@ -1,11 +1,14 @@
 ---
 bibliography: bibliography.bib
 csl: apa.csl
-title: estatjp
 ---
+
+# estatjp
 
 See Higashi & Kurokawa (2024) for an introduction to non-standard
 analysis. Non-standard analysis is fun (Higashi & Kurokawa, 2024).
+
+# References
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0" line-spacing="2">
@@ -20,3 +23,5 @@ statistics 2024. *Annals of Gastroenterological Surgery*, *8*(6),
 </div>
 
 </div>
+
+
