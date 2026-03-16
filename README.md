@@ -3,6 +3,14 @@
 See Higashi & Kurokawa (2024) for an introduction to non-standard
 analysis. Non-standard analysis is fun (Higashi & Kurokawa, 2024).
 
+<span id="ref-higashi2024incidence">ref-higashi2024incidence</span>
+
+Higashi & Kurokawa (2024)\_
+
+Hyperlink: [ref-higashi2024incidence](#ref-higashi2024incidence)
+
+Hyperlink: [Higashi & Kurokawa (2024)](#ref-higashi2024incidence)
+
 # References
 
 <div id="refs" class="container references csl-bib-body hanging-indent"
@@ -22,7 +30,7 @@ Conference of the Information Systems Society in Japan ISSJ2022*, S1–C1.
 Ashikawa, Souta, Matsuda, Junichi, & Osone, Tadashi. (2023). Development
 of front-end search system improving recall in e-stat. *Proceedings of
 Annual Conference of the Information Systems Society in Japan ISSJ2023*,
-1–6. <https://doi.org/10.19014/proceedingsissj.19.0_P001>
+1 E. <https://doi.org/10.19014/proceedingsissj.19.0_P001>
 
 </div>
 
@@ -38,7 +46,7 @@ cocosan. (2023). *Python apuri seifu tokei e-stat wo shigoto ni ikase!*
 Higashi, Takahiro, & Kurokawa, Yukinori. (2024). Incidence, mortality,
 survival, and treatment statistics of cancers in digestive
 organs—japanese cancer statistics 2024. *Annals of Gastroenterological
-Surgery*, *8*(6), 958–965. <https://doi.org/10.1002/ags3.12835>
+Surgery*, *8*(6), 958 E65. <https://doi.org/10.1002/ags3.12835>
 
 </div>
 
@@ -69,7 +77,7 @@ National Statistics Center, Japan. (2016). *Chukan apuri*.
 
 Nishimura, Shoki. (2017). Providing statistical data by linked open data
 (LOD): Innovative official statistical data (e-stat) dissemination.
-*Joho Kanri*, *59*(12), 812–821.
+*Joho Kanri*, *59*(12), 812 E21.
 <https://doi.org/10.1241/johokanri.59.812>
 
 </div>
@@ -78,7 +86,7 @@ Nishimura, Shoki. (2017). Providing statistical data by linked open data
 
 Seki, Katsunori. (2023). Social identification and redistribution
 preference: A survey experiment in japan. *Social Science Japan
-Journal*, *26*(1), 47–60. <https://doi.org/10.1093/ssjj/jyac029>
+Journal*, *26*(1), 47 E0. <https://doi.org/10.1093/ssjj/jyac029>
 
 </div>
 
@@ -94,7 +102,7 @@ katsuyo!* Impress R&D.
 
 Wakabayashi, Chihiro, Shinmura, Hiromi, Ando, Miri, Shimada, Masako, &
 Yanagawa, Hiroshi. (2015). Kōeisei topikksu dai 13 kai seifutōkei no
-sōgōmadoguchi e-stat: Chiiki shindan he no katsuyō - jissen herusu
+sōgōmadoguchi e-stat: Chiiki shindan he no katsuyŁE- jissen herusu
 puromōshon. *Gekkan Chiiki Igaku*, *29*(2), 52.
 <https://doi.org/10.60261/chiikiigaku.29.2_52>
 
