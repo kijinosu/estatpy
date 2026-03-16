@@ -32,7 +32,7 @@ Install this package
 
     pip install estatjp
 
-=================
-Useful References
-=================
+==========
+References
+==========
 

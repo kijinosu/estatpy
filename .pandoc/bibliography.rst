@@ -22,7 +22,7 @@
    .. container:: csl-entry
       :name: ref-cocosan2023python.en
 
-      cocosan. (2023). *Python apuri seifu tokei e-stat wo shigoto ni
+      cocosan. (2023). *Python apuri: Seifu tokei e-stat wo shigoto ni
       ikase!* https://www.youtube.com/watch?v=hiaK-jTXpCI.
 
    .. container:: csl-entry
