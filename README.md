@@ -1,20 +1,40 @@
 # estatjp
 
-See Higashi & Kurokawa (2024) for an introduction to non-standard
-analysis. Non-standard analysis is fun (Higashi & Kurokawa, 2024).
+[E-Stat](https://www.e-stat.go.jp/en) is a widely used portal site for
+accessing Japanese governmental statistical data. Began operation in
+2008. e-Stat currently hosts <span class="title-ref">744 surveys
+(1,688,550 datasets) in Japanese</span> from about 30 governmental
+agencies with [56 surveys (292,856 datasets) available in
+English](https://www.e-stat.go.jp/en/stat-search?page=1). These
+collections contain 'databases' and files (mainly Excel files). The
+'databases' can be accessed via an API. API urls can cover entire
+databases or subsets that can be tailored to users' individual needs.
 
-<span id="ref-higashi2024incidence">ref-higashi2024incidence</span>
+The objective of the <span class="title-ref">estatjp</span> Python
+package is to provide access to the e-Stat portal and return datasets in
+<span class="title-ref">pandas.DataFrame</span> format.
 
-Higashi & Kurokawa (2024)\_
+For example, the e-Stat API returns CSV streams that contain headers
+with metadata. These headers interfere with
+<span class="title-ref">pandas.get_csv</span>. The first release of
+estatjp returns a dictionary that contains the header and main table as
+separate dataframes.
 
-Hyperlink: [ref-higashi2024incidence](#ref-higashi2024incidence)
+= Requirement
 
-Hyperlink: [Higashi & Kurokawa (2024)](#ref-higashi2024incidence)
+The e-Stat API requires an application ID that can be obtained from the
+[E-Stat API](https://www.e-stat.go.jp/api/en) page. Install this ID into
+your project by setting your terminal to your project root and running
+the following commands:
+
+``` 
+pip install python-dotenv
+dotenv set ESTAT_APP_ID your-app-id
+```
 
 # References
 
-<div id="refs" class="container references csl-bib-body hanging-indent"
-entry-spacing="0" line-spacing="2">
+<div id="refs" class="container references csl-bib-body hanging-indent">
 
 <div id="ref-ashizawa2022estat.en" class="container csl-entry">
 
@@ -105,15 +125,6 @@ Yanagawa, Hiroshi. (2015). Kōeisei topikksu dai 13 kai seifutōkei no
 sōgōmadoguchi e-stat: Chiiki shindan he no katsuyŁE- jissen herusu
 puromōshon. *Gekkan Chiiki Igaku*, *29*(2), 52.
 <https://doi.org/10.60261/chiikiigaku.29.2_52>
-
-</div>
-
-<div id="ref-higashi2024incidence" class="csl-entry">
-
-Higashi, Takahiro, & Kurokawa, Yukinori. (2024). Incidence, mortality,
-survival, and treatment statistics of cancers in digestive
-organs—japanese cancer statistics 2024. *Annals of Gastroenterological
-Surgery*, *8*(6), 958–965. <https://doi.org/10.1002/ags3.12835>
 
 </div>
 
