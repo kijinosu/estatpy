@@ -20,7 +20,7 @@ with metadata. These headers interfere with
 estatjp returns a dictionary that contains the header and main table as
 separate dataframes.
 
-= Requirement
+## Requirement
 
 The e-Stat API requires an application ID that can be obtained from the
 [E-Stat API](https://www.e-stat.go.jp/api/en) page. Install this ID into
@@ -32,7 +32,13 @@ pip install python-dotenv
 dotenv set ESTAT_APP_ID your-app-id
 ```
 
-# References
+## Install this package
+
+``` 
+pip install estatjp
+```
+
+# Useful References
 
 <div id="refs" class="container references csl-bib-body hanging-indent">
 
@@ -67,6 +73,14 @@ Higashi, Takahiro, & Kurokawa, Yukinori. (2024). Incidence, mortality,
 survival, and treatment statistics of cancers in digestive
 organs—japanese cancer statistics 2024. *Annals of Gastroenterological
 Surgery*, *8*(6), 958 E65. <https://doi.org/10.1002/ags3.12835>
+
+</div>
+
+<div id="ref-inoue2023self" class="container csl-entry">
+
+Inoue, Takao. (2023). A self-made tutorial for GitHub flavored markdown
+(GFM), and its source codes. *ResearchGate*.
+<https://www.researchgate.net/publication/370937551_A_self-made_tutorial_for_GitHub_Flavored_Markdown_GFM_and_its_source_codes>
 
 </div>
 

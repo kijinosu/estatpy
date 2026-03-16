@@ -35,6 +35,13 @@
       https://doi.org/10.1002/ags3.12835
 
    .. container:: csl-entry
+      :name: ref-inoue2023self
+
+      Inoue, Takao. (2023). A self-made tutorial for GitHub flavored
+      markdown (GFM), and its source codes. *ResearchGate*.
+      https://www.researchgate.net/publication/370937551_A_self-made_tutorial_for_GitHub_Flavored_Markdown_GFM_and_its_source_codes
+
+   .. container:: csl-entry
       :name: ref-kato2021residential
 
       Kato, Haruka, & Takizawa, Atsushi. (2021). Which residential

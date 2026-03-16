@@ -13,7 +13,9 @@ The objective of the `estatjp` Python package is to provide access to the e-Stat
 
 For example, the e-Stat API returns CSV streams that contain headers with metadata. These headers interfere with `pandas.get_csv`. The first release of estatjp returns a dictionary that contains the header and main table as separate dataframes.
 
-= Requirement
+-----------
+Requirement
+-----------
 
 The e-Stat API requires an application ID that can be obtained from the `E-Stat API`_ page. Install this ID into your project by setting your terminal to your project root and running the following commands:
 
@@ -22,8 +24,15 @@ The e-Stat API requires an application ID that can be obtained from the `E-Stat 
     pip install python-dotenv
     dotenv set ESTAT_APP_ID your-app-id
 
+--------------------
+Install this package
+--------------------
 
-==========
-References
-==========
+.. code::
+
+    pip install estatjp
+
+=================
+Useful References
+=================
 
