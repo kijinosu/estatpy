@@ -7,5 +7,3 @@ Non-standard analysis is fun :cite:p:`higashi2024incidence`.
 References
 ==========
 
-.. bibliography:: 
-   :all:
