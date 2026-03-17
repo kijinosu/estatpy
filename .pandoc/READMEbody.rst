@@ -2,7 +2,7 @@
 estatjp
 =======
 
-`E-Stat`_ is a widely used portal site for accessing Japanese governmental statistical data. Began operation in 2008. e-Stat currently hosts `744 surveys (1,688,550 datasets) in Japanese <https://www.e-stat.go.jp/stat-search?page=1>`_ from about 30 governmental agencies with `56 surveys (292,856 datasets) available in English <https://www.e-stat.go.jp/en/stat-search?page=1>`_. These collections contain 'databases' and files (mainly Excel files). The 'databases' can be accessed via an API. API urls can cover entire databases or subsets that can be tailored to users' individual needs.
+`E-Stat`_ is a widely used portal site for accessing Japanese governmental statistical data. Began operation in 2008. e-Stat currently hosts `744 surveys (1,688,550 datasets) in Japanese <https://www.e-stat.go.jp/stat-search?page=1 target='_blank'>`_ from about 30 governmental agencies with `56 surveys (292,856 datasets) available in English <https://www.e-stat.go.jp/en/stat-search?page=1>`_. These collections contain 'databases' and files (mainly Excel files). The 'databases' can be accessed via an API. API urls can cover entire databases or subsets that can be tailored to users' individual needs.
 
 .. _E-Stat: https://www.e-stat.go.jp/en
 .. _E-Stat API: https://www.e-stat.go.jp/api/en
