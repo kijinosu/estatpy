@@ -3,11 +3,11 @@
 [E-Stat](https://www.e-stat.go.jp/en) is a widely used portal site for
 accessing Japanese governmental statistical data. Began operation in
 2008. e-Stat currently hosts [744 surveys (1,688,550 datasets) in
-Japanese](https://www.e-stat.go.jp/stat-search?page=1 target='_blank')
-from about 30 governmental agencies with [56 surveys (292,856 datasets)
-available in English](https://www.e-stat.go.jp/en/stat-search?page=1).
-These collections contain 'databases' and files (mainly Excel files).
-The 'databases' can be accessed via an API. API urls can cover entire
+Japanese](https://www.e-stat.go.jp/stat-search?page=1) from about 30
+governmental agencies with [56 surveys (292,856 datasets) available in
+English](https://www.e-stat.go.jp/en/stat-search?page=1). These
+collections contain 'databases' and files (mainly Excel files). The
+'databases' can be accessed via an API. API urls can cover entire
 databases or subsets that can be tailored to users' individual needs.
 
 The objective of the estatjp Python package is to provide access to the
@@ -21,9 +21,8 @@ main table as separate dataframes.
 ## Requirement
 
 The e-Stat API requires an application ID that can be obtained from the
-[E-Stat API](https://www.e-stat.go.jp/api/en) page. Install this ID into
-your project by setting your terminal to your project root and running
-the following commands:
+[]() page. Install this ID into your project by setting your terminal to
+your project root and running the following commands:
 
 ``` 
 pip install python-dotenv
