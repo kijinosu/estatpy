@@ -153,9 +153,9 @@ builder = true
 # This table installs created the command hatch run install:check which will build and check your package.
 [tool.hatch.envs.build.scripts]
 check = [
-    "pandoc -f bibtex -t rst bibliography.bib --citeproc --csl .pandoc/styles/apa-no-initials.csl -o .pandoc/bibliography.rst",
-    "pandoc .pandoc/READMEbody.rst .pandoc/bibliography.rst -o .pandoc/README.rst",
-    "pandoc -f rst -t gfm .pandoc/README.rst --citeproc --bibliography bibliography.bib --csl .pandoc/styles/apa-no-initials.csl -o README.md",
+    "pandoc -f bibtex -t markdown bibliography.bib --citeproc --csl .pandoc/styles/apa-no-initials.csl -o .pandoc/bibliography.md",
+    "pandoc -f markdown -t gfm .pandoc/READMEbody.md .pandoc/bibliography.md -o .pandoc/README.md",
+    "pandoc -f gfm -t gfm .pandoc/README.md -o README.md",
     "pip check",
     "hatch build {args:--clean}",
     "twine check dist/*",
