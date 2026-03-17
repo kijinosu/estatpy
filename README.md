@@ -2,9 +2,9 @@
 
 [E-Stat](https://www.e-stat.go.jp/en) is a widely used portal site for
 accessing Japanese governmental statistical data. Began operation in
-2008. e-Stat currently hosts 744 surveys (1,688,550 datasets) in
-Japanese from about 30 governmental agencies with [56 surveys (292,856
-datasets) available in
+2008. e-Stat currently hosts [744 surveys (1,688,550 datasets) in
+Japanese](https://www.e-stat.go.jp/stat-search?page=1) from about 30
+governmental agencies with [56 surveys (292,856 datasets) available in
 English](https://www.e-stat.go.jp/en/stat-search?page=1). These
 collections contain 'databases' and files (mainly Excel files). The
 'databases' can be accessed via an API. API urls can cover entire
@@ -38,11 +38,11 @@ pip install estatjp
 
 ## Example
 
-This example downloads an English dataset, the \[Labour Force Survey
+This example downloads an English dataset, the [Labour Force Survey
 Basic Tabulation Whole Japan Monthly table Population of 15 years old
 and over by labour force
-status\](<https://www.e-stat.go.jp/en/dbview?sid=0003005798>). The API
-url for that table is assigned to enurl below.
+status](https://www.e-stat.go.jp/en/dbview?sid=0003005798). The API url
+for that table is assigned to enurl below.
 
 ``` python
 import pandas
