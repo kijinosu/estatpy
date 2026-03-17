@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Upcoming features and fixes
+- Build out documentation and put on Read the Docs
 
-## [0.1.0] - (1979-01-01)
+## [v0.0.6-alpha-5] - (2026-03-17)
 
-- First release
+- First alpha pre-release

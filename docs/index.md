@@ -1,4 +1,4 @@
-# Welcome to estatpy's Documentation '
+# Welcome to estatjp's Documentation '
 
 ## Overview
 

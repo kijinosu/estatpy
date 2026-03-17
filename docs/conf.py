@@ -1,5 +1,5 @@
 #
-# estatpy documentation build configuration file
+# estatjp documentation build configuration file
 #
 import os
 import sys
@@ -14,7 +14,7 @@ current_year = datetime.now().year
 
 # -- General project information -----------------------------
 # General information about the project.
-project = "estatpy"
+project = "estatjp"
 copyright = "Copyright © 2026 Alan Engel"
 html_show_sphinx = False
 
@@ -22,7 +22,7 @@ html_show_sphinx = False
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 try:
-    version = importlib.metadata.version("estatpy")
+    version = importlib.metadata.version("estatjp")
 except importlib.metadata.PackageNotFoundError:
     version = "0.0.0"
 
@@ -33,6 +33,7 @@ except importlib.metadata.PackageNotFoundError:
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
+    "nbsphinx",
     "myst_parser",
     "sphinx_design",
     "sphinx_copybutton",
@@ -43,7 +44,9 @@ extensions = [
     "sphinx.ext.todo",
     # Auto generate docs
     "autoapi.extension",
+    "sphinxcontrib.bibtex"
 ]
+bibtex_bibfiles = ["../bibliography.bib"]
 
 # Support Markdown source files & rst for api docs
 source_suffix = [".rst", ".md"]
@@ -133,7 +136,7 @@ html_theme = "pydata_sphinx_theme"
 # html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "estatpy_doc"
+htmlhelp_basename = "estatjp_doc"
 
 
 intersphinx_mapping = {

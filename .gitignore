@@ -1,6 +1,5 @@
 ## my additions
 .mynotes
-.pypirc
 
 ### Linux template
 *~
@@ -114,6 +113,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.mynotes/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
