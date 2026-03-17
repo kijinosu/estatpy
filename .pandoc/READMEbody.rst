@@ -6,6 +6,7 @@ estatjp
 
 .. _E-Stat: https://www.e-stat.go.jp/en
 .. |E-Stat API| raw:: html
+
     <a href=" https://www.e-stat.go.jp/api/en" target="_blank">E-Stat API</a>
 
 The objective of the `estatjp` Python package is to provide access to the e-Stat portal and return datasets in `pandas.DataFrame` format.
@@ -16,7 +17,7 @@ For example, the e-Stat API returns CSV streams that contain headers with metada
 Requirement
 -----------
 
-The e-Stat API requires an application ID that can be obtained from the |E-Stat API|_ page. Install this ID into your project by setting your terminal to your project root and running the following commands:
+The e-Stat API requires an application ID that can be obtained from the |E-Stat API| page. Install this ID into your project by setting your terminal to your project root and running the following commands:
 
 .. code::
 

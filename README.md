@@ -21,8 +21,8 @@ main table as separate dataframes.
 ## Requirement
 
 The e-Stat API requires an application ID that can be obtained from the
-[]() page. Install this ID into your project by setting your terminal to
-your project root and running the following commands:
+page. Install this ID into your project by setting your terminal to your
+project root and running the following commands:
 
 ``` 
 pip install python-dotenv
