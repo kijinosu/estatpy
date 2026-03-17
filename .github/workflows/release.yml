@@ -4,7 +4,7 @@ on:
   pull_request:
   push:
     branches:
-      - tutorial5
+      - main
   release:
     types: [published]
 

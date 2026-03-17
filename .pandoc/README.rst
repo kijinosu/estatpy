@@ -39,6 +39,26 @@ Install this package
 
    pip install estatjp
 
+Example
+-------
+
+This example downloads an English dataset, the [Labour Force Survey
+Basic Tabulation Whole Japan Monthly table Population of 15 years old
+and over by labour force
+status](https://www.e-stat.go.jp/en/dbview?sid=0003005798). The API url
+for that table is assigned to enurl below.
+
+.. code:: python
+
+   import pandas
+   from dotenv import load_dotenv
+   from estatjp import api
+   enurl = 'http://api.e-stat.go.jp/rest/3.0/app/getSimpleStatsData?appId=&lang=E&statsDataId=0003005798&metaGetFlg=Y&cntGetFlg=N&explanationGetFlg=Y&annotationGetFlg=Y&sectionHeaderFlg=1&replaceSpChars=0'
+   dfs = api.get_csv_data(enurl)
+   print(dfs.get('Header'))
+   print(dfs.get('Main'))
+   print(dfs.get('Description'))
+
 References
 ==========
 
