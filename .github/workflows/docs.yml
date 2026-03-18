@@ -19,11 +19,11 @@ jobs:
 
       - name: Install myst-parser
         run: |
-            python -m pip myst-parser
+            python -m pip install myst-parser
 
       - name: Install nbsphinx
         run: |
-            python -m pip nbsphinx
+            python -m pip install nbsphinx
 
       - name: Install hatch
         run: |
