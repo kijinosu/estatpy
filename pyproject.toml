@@ -13,7 +13,7 @@ requires = ["hatchling"]
 [project]
 name = "estatjp"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
-version = "v0.0.6-alpha-5"
+version = "v0.1.1"
 
 description = "A Python package for accessing Japanese government data on its e-Stat portal"
 authors = [
@@ -153,9 +153,8 @@ builder = true
 # This table installs created the command hatch run install:check which will build and check your package.
 [tool.hatch.envs.build.scripts]
 check = [
-    "pandoc -f bibtex -t rst bibliography.bib --citeproc --csl .pandoc/styles/apa-no-initials.csl -o .pandoc/bibliography.rst",
-    "pandoc .pandoc/READMEbody.rst .pandoc/bibliography.rst -o .pandoc/README.rst",
-    "pandoc -f rst -t gfm .pandoc/README.rst --citeproc --bibliography bibliography.bib --csl .pandoc/styles/apa-no-initials.csl -o README.md",
+    "pandoc -f bibtex -t markdown bibliography.bib --citeproc --csl .pandoc/styles/apa-no-initials.csl -o .pandoc/bibliography.md",
+    "pandoc -f markdown -t gfm .pandoc/READMEbody.md .pandoc/bibliography.md -o README.md",
     "pip check",
     "hatch build {args:--clean}",
     "twine check dist/*",
@@ -169,7 +168,7 @@ features = [
 ]
 
 [[tool.hatch.envs.test.matrix]]
-python = ["3.12", "3.13","3.14"]
+python = ["3.12", "3.13"]
 
 [tool.hatch.envs.test.scripts]
 run = "pytest {args:--cov=estatjp --cov-report=term-missing --cov-report=xml}"

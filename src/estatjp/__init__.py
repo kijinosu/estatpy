@@ -22,8 +22,9 @@
 # SOFTWARE.
 
 """
-Add a docstring here for the init module.
+The `E-Stat`_ portal site contains 'databases' that can be accessed via API urls or downloads as XML, CSV and JSON files, and files (mainly Excel files) that can be downloaded. This package will eventually provide for converting these into `pandas DataFrames`_. This early release handles only API url calls with CSV downloads.
 
-This might include a very brief description of the package,
-its purpose, and any important notes.
+.. _E-Stat: https://www.e-stat.go.jp/en
+.. _pandas DataFrames: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html
+
 """
