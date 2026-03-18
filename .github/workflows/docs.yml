@@ -17,6 +17,14 @@ jobs:
         with:
             python-version: ${{ matrix.python-version }}
 
+      - name: Setup pandoc
+        uses: r-lib/actions/setup-pandoc@4f58f8ffa872cbd4cb016c51ec497fdbe0a02711 #v2
+        with:
+          pandoc-version: '3.1.11' # The pandoc version to download (if necessary) and use.
+
+      - name: Test pandoc
+        run: echo "# Test" | pandoc -t html
+
       - name: Install myst-parser
         run: |
             python -m pip install myst-parser
