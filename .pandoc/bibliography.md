@@ -1,4 +1,4 @@
-::::::::::::::: {#refs .references .csl-bib-body .hanging-indent entry-spacing="0" line-spacing="2"}
+::::::::::::::::::: {#refs .references .csl-bib-body .hanging-indent entry-spacing="0" line-spacing="2"}
 ::: {#ref-ashizawa2022estat.en .csl-entry}
 Ashikawa, Souta, Matsuda, Junichi, & Osone, Tadashi. (2022). Method for
 improving the recall in e-stat data search. *Proceedings of Annual
@@ -74,4 +74,31 @@ sōgōmadoguchi e-stat: Chiiki shindan he no katsuyō - jissen herusu
 puromōshon. *Gekkan Chiiki Igaku*, *29*(2), 52.
 <https://doi.org/10.60261/chiikiigaku.29.2_52>
 :::
-:::::::::::::::
+
+::: {#ref-ashizawa2022estat.ja .csl-entry}
+芦澤颯太, 松田純一, & 大曽根匡. (2022). E-stat
+での統計データ検索におけるいくつかの課題抽出とその解決方法の提案.
+*情報システム学会 全国大会論文集 ISSJ2022*, S1--C1.
+<https://doi.org/10.19014/proceedingsissj.18.0_S1-C1>
+:::
+
+::: {#ref-ashizawa2023estat.ja .csl-entry}
+芦澤颯太, 松田純一, & 大曽根匡. (2023). E-stat
+における検索漏れを抑止する情報システムの開発とその検証.
+*情報システム学会 全国大会論文集 情報システム学会*, 1--6.
+<https://doi.org/10.19014/proceedingsissj.19.0_P001>
+:::
+
+::: {#ref-wakabayashi2015public.ja .csl-entry}
+若林チヒロ, 新村洋未, 安藤実里, 嶋田雅子, & 柳川洋. (2015).
+公衆衛生トピックス 第 13 回 政府統計の総合窓口
+e-stat-地域診断への活用-実践ヘルスプロモーション. *月刊地域医学*,
+*29*(2), 52. <https://doi.org/10.60261/chiikiigaku.29.2_52>
+:::
+
+::: {#ref-nishimura2017linked.ja .csl-entry}
+西村正貴. (2017). Linked open data (LOD) による統計データの提供:
+政府統計データ (e-stat) の新しい形. *情報管理*, *59*(12), 812--821.
+<https://doi.org/10.1241/johokanri.59.812>
+:::
+:::::::::::::::::::
