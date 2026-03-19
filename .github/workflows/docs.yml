@@ -27,6 +27,7 @@ jobs:
 
       - name: Install sphinx-autoapi
         run: |
+            python -m pip install --upgrade pip
             python -m pip install sphinx-autoapi==0.7.1
 
       - name: Install autobuild
@@ -39,7 +40,8 @@ jobs:
 
       - name: Install ipython
         run: |
-            python -m pip install ipython
+            python -m pip install ipython==9.11.0
+            python -m pip install ipython-pygments-lexers
             
       - name: Install myst-parser
         run: |
@@ -51,7 +53,6 @@ jobs:
 
       - name: Install hatch
         run: |
-            python -m pip install --upgrade pip
             python -m pip install hatch
 
       - name: Build documentation using Hatch
