@@ -27,15 +27,15 @@ jobs:
 
       - name: Install sphinx-autoapi
         run: |
-            pip -m install sphinx-autoapi==0.7.1
+            python -m pip install sphinx-autoapi==0.7.1
 
       - name: Install autobuild
         run: |
-            pip -m install sphinx-autobuild
+            python -m pip install sphinx-autobuild
 
       - name: Install sphinxcontrib-bibtex
         run: |
-            pip -m install sphinxcontrib-bibtex
+            python -m pip install sphinxcontrib-bibtex
 
       - name: Install ipython
         run: |
