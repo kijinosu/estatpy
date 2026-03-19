@@ -25,6 +25,18 @@ jobs:
       - name: Test pandoc
         run: echo "# Test" | pandoc -t html
 
+      - name: Install sphinx-autoapi
+        run: |
+            pip install sphinx-autoapi==0.7.1
+
+      - name: Install autobuild
+        run: |
+            pip install sphinx-autobuild
+
+      - name: Install sphinxcontrib-bibtex
+        run: |
+            pip install sphinxcontrib-bibtex
+
       - name: Install ipython
         run: |
             python -m pip install ipython
