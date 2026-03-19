@@ -53,7 +53,7 @@ bibtex_bibfiles = ["../../bibliography.bib"]
 source_suffix = [".rst", ".md"]
 
 # The master toctree document.
-master_doc = "index.rst"
+master_doc = "index"
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "default"
