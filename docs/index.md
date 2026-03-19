@@ -8,7 +8,8 @@
 :caption: Contents:
 
 Home <self>
-Chronicle <chronicle/index.rst>
+Chronicle <chronicle/>
+
 :::
 
 [E-Stat](https://www.e-stat.go.jp/en) is a widely used portal site for
