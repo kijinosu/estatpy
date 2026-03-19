@@ -42,6 +42,7 @@ extensions = [
     # This allows you to create :::{todo} sections that will not be rendered
     # in the live docs if you want to leave notes for future work in the docs
     "sphinx.ext.todo",
+    "sphinx.ext.autodoc",
     # Auto generate docs
     "autoapi.extension",
     "sphinxcontrib.bibtex"
