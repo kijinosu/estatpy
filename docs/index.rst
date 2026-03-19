@@ -7,4 +7,6 @@ This folder contains Jupyter notebooks created in the development of `estatjp`.
    :maxdepth: 2
    :caption: Contents:
 
-   chronicle/
+   Home <self>
+   Chronicle <chronicle>
+
