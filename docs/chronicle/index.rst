@@ -9,7 +9,7 @@ estatjp development chronicle
 This folder contains Jupyter notebooks created in the development of `estatjp`.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    DevAPI01.ipynb
