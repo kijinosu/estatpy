@@ -34,7 +34,7 @@ except importlib.metadata.PackageNotFoundError:
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     "nbsphinx",
-    "myst_parser",
+    # "myst_parser",
     "sphinx_design",
     "sphinx_copybutton",
     "sphinx.ext.intersphinx",
@@ -45,7 +45,7 @@ extensions = [
     "sphinx.ext.autodoc",
     # Auto generate docs
     "autoapi.extension",
-    "sphinxcontrib.bibtex"
+    "sphinxcontrib.bibtex",
 ]
 bibtex_bibfiles = ["../../bibliography.bib"]
 
