@@ -46,7 +46,7 @@ extensions = [
     "autoapi.extension",
     "sphinxcontrib.bibtex"
 ]
-bibtex_bibfiles = ["../bibliography.bib"]
+bibtex_bibfiles = ["../../bibliography.bib"]
 
 # Support Markdown source files & rst for api docs
 source_suffix = [".rst", ".md"]
