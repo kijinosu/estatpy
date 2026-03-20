@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>DevAPI01.ipynb: Developing estatpy.api.get_csv_data() &#8212; estatjp  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chronicle/DevAPI01';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DevAPI02.ipynb: Exception handling for estatpy.api.get_csv_data()" href="DevAPI02.html" />
+    <link rel="prev" title="estatjp development chronicle" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.0.6a5" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">estatjp  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../index.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Chronicle
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../autoapi/index.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../index.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Chronicle
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../autoapi/index.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">DevAPI01.ipynb: Developing <code class="docutils literal notranslate"><span class="pre">estatpy.api.get_csv_data()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="DevAPI02.html">DevAPI02.ipynb: Exception handling for <code class="docutils literal notranslate"><span class="pre">estatpy.api.get_csv_data()</span></code></a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">estatjp development chronicle</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">DevAPI01.ipynb: Developing <code class="docutils literal notranslate"><span class="pre">estatpy.api.get_csv_data()</span></code></span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="DevAPI01.ipynb:-Developing-estatpy.api.get_csv_data()">
+<h1>DevAPI01.ipynb: Developing <code class="docutils literal notranslate"><span class="pre">estatpy.api.get_csv_data()</span></code><a class="headerlink" href="#DevAPI01.ipynb:-Developing-estatpy.api.get_csv_data()" title="Link to this heading">#</a></h1>
+<p>This module is inspired by <a class="reference external" href="https://www.youtube.com/watch?v=hiaK-jTXpCI">cocosan</a>’s video example <span id="id1">[<a class="reference internal" href="#id7" title="cocosan. Python apuri: seifu tokei e-stat wo shigoto ni ikase! https://www.youtube.com/watch?v=hiaK-jTXpCI, 2023.">cocosan23</a>]</span>. Cocosan uses Python packages streamlit, pandas, and plotly. This notebook will first partially implement Cocosan’s example to retrieve a CVS stream from e-Stat and create a Python data frame. Knowledge gained from this exercise will be applied to create a first version of an api.getdata() function.</p>
+<section id="Check-for-required-packages">
+<h2>Check for required packages<a class="headerlink" href="#Check-for-required-packages" title="Link to this heading">#</a></h2>
+<p>Cocosan uses streamlit to produce output in markdown that is then displayed in a browser. This implementation displays the output in this notebook. The following code runs terminal commands to install the most recent versions of pandas, and plotly.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">capture</span> <span class="n">capt</span>
+<span class="c1"># %%capture puts the output in &#39;capt&#39; from which it can be ignored or printed</span>
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">plotly</span>
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">dotenv</span> <span class="c1"># for using local environment variables</span>
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">fsspec</span> <span class="c1"># to help pandas IO. See https://pandas.pydata.org/docs/user_guide/io.html#reading-writing-remote-files</span>
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Obtain-and-save-API-appId">
+<h2>Obtain and save API appId<a class="headerlink" href="#Obtain-and-save-API-appId" title="Link to this heading">#</a></h2>
+<p>E-Stat’s API requires registration at <a class="reference external" href="https://www.e-stat.go.jp/api/en">e-Stat API</a>. Registration and sign-in accesses a dashboard from which you can apply for an App ID.</p>
+<p>When stored in a text file (.env) <code class="docutils literal notranslate"><span class="pre">ESTAT_APP_ID</span> <span class="pre">=</span> <span class="pre">'(App</span> <span class="pre">Id)'</span></code> in your project root, it can be retrieved with the following code.[^1]</p>
+<p>[^1] Cocosan uses the <a class="reference external" href="https://docs.streamlit.io/develop/api-reference/connections/st.secrets">st.secrets feature of streamlit</a>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">load_dotenv</span><span class="p">()</span>
+<span class="n">app_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;ESTAT_APP_ID&#39;</span><span class="p">]</span>
+<span class="c1"># print(app_id)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Define-the-get_data(url)-function">
+<h2>Define the <code class="docutils literal notranslate"><span class="pre">get_data(url)</span></code> function<a class="headerlink" href="#Define-the-get_data(url)-function" title="Link to this heading">#</a></h2>
+<p>Now define the <code class="docutils literal notranslate"><span class="pre">get_data(url)</span></code> function. This implementation uses <code class="docutils literal notranslate"><span class="pre">url.split</span></code> to divide the url at the field string <code class="docutils literal notranslate"><span class="pre">appId=</span></code>. <code class="docutils literal notranslate"><span class="pre">url.split</span></code> returns a vector of string segments and, because “appId=” only occurs once, the returned vector here is of length 2. These are concatenated with “appId=” and the variable <code class="docutils literal notranslate"><span class="pre">appId</span></code> to produce the complete url.</p>
+<p>Cocosan provides space for up to 50 columns (<code class="docutils literal notranslate"><span class="pre">names=range(50)</span></code>) and has <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html">pandas.read_csv</a> read the file to obtain a <a class="reference external" href="https://pandas.pydata.org/docs/reference/frame.html">pandas.DataFrame</a>.</p>
+<p>The data frame <code class="docutils literal notranslate"><span class="pre">df</span></code> begins with several rows of metadata terminated by the string “VALUE”.</p>
+<p>Cocosan’ example uses an API url that downloads data on <a class="reference external" href="https://www.e-stat.go.jp/stat-search/database?page=1&amp;layout=datalist&amp;toukei=00600120&amp;tstat=000001016966&amp;cycle=1&amp;statdisp_id=0003114535&amp;tclass1val=0">monthly housing starts</a>. This table is in Japanese. Housing start data is available in English but only in the form of <a class="reference external" href="https://www.e-stat.go.jp/en/stat-search/files?page=1&amp;layout=dataset&amp;toukei=00600120&amp;tstat=000001016966&amp;cycle=1&amp;tclass1val=0">monthly Excel tables</a>.</p>
+<p>A smaller English dataset is the <a class="reference external" href="https://www.e-stat.go.jp/en/dbview?sid=0003005798">Labour Force Survey Basic Tabulation Whole Japan Monthly table Population of 15 years old and over by labour force status</a>. The API url for that table is assigned to <code class="docutils literal notranslate"><span class="pre">enurl</span></code> below.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cocosan&#39;s url:</span>
+<span class="n">cocosanurl</span> <span class="o">=</span> <span class="s1">&#39;http://api.e-stat.go.jp/rest/3.0/app/getSimpleStatsData?appId=&amp;lang=J&amp;statsDataId=0003114535&amp;metaGetFlg=Y&amp;cntGetFlg=N&amp;explanationGetFlg=Y&amp;annotationGetFlg=Y&amp;sectionHeaderFlg=1&amp;replaceSpChars=0&#39;</span>
+<span class="c1"># Labor force url:</span>
+<span class="n">enurl</span> <span class="o">=</span> <span class="s1">&#39;http://api.e-stat.go.jp/rest/3.0/app/getSimpleStatsData?appId=&amp;lang=E&amp;statsDataId=0003005798&amp;metaGetFlg=Y&amp;cntGetFlg=N&amp;explanationGetFlg=Y&amp;annotationGetFlg=Y&amp;sectionHeaderFlg=1&amp;replaceSpChars=0&#39;</span>
+<br/></pre></div>
+</div>
+</div>
+<p>Technical references consulted for the code below:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/io.html#iterating-through-files-chunk-by-chunk">Iterating through files chunk by chunk</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_while_loops.asp">Python While Loops</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/tutorial/inputoutput.html#tut-files">Reading and Writing Files</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pandas-dev/pandas/blob/main/pandas/io/parsers/readers.py">readers.py</a></p></li>
+<li><p><a class="reference external" href="https://www.geeksforgeeks.org/python/read-a-file-line-by-line-in-python/">Read a file line by line in Python</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/io.html#text-i-o">io — Core tools for working with streams</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/codecs.html#streamreader-objects">StreamReader Objects</a></p></li>
+<li><p><a class="reference external" href="https://requests.readthedocs.io/en/latest/">Requests: HTTP for Humans™</a></p>
+<ul>
+<li><p><a class="reference external" href="https://requests.readthedocs.io/en/latest/user/advanced/#streaming-requests">Streaming Requests</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://docs.python.org/3.13/library/tempfile.html">tempfile — Generate temporary files and directories</a></p></li>
+</ul>
+</section>
+<section id="Work-around-for-metadata-in-csv-stream">
+<h2>Work-around for metadata in csv stream<a class="headerlink" href="#Work-around-for-metadata-in-csv-stream" title="Link to this heading">#</a></h2>
+<p>CSV streams from the e-Stat API have a multiple line preface of metadata that describes the dataset and that may be important for documenting the study. A problem arises because <code class="docutils literal notranslate"><span class="pre">pandas.get_csv</span></code> takes its column count from the first line, and this cannot be changed midstream even with chunking. The work-around below iterates over the <code class="docutils literal notranslate"><span class="pre">response.iter_lines()</span></code> stream from <code class="docutils literal notranslate"><span class="pre">requests.get()</span></code> to move the stream position to the start of the table, writing the metadata to a temporary file in the
+process. (Setting <code class="docutils literal notranslate"><span class="pre">stream</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code> prevents <code class="docutils literal notranslate"><span class="pre">response.iter_lines()</span></code> from chunking the stream and being rendered reentrant unsafe.) Taking a hint from <a class="reference external" href="https://github.com/pandas-dev/pandas/blob/main/pandas/io/parsers/readers.py#258">pandas.parsers._read</a>, it turns out that <code class="docutils literal notranslate"><span class="pre">pandas.read_csv</span></code> can be launched here and will grab the next row as its column names.</p>
+<p>This implementation includes a <code class="docutils literal notranslate"><span class="pre">description</span></code> parameter that gives the user a mechanism for writing documentation with the dataset. The default is ‘datetime.datetime.now()’, but this can be substituted by the user as she may desire.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_data</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()):</span>
+    <span class="n">app_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;ESTAT_APP_ID&#39;</span><span class="p">]</span>
+    <span class="n">url_split</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;appId=&quot;</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">url_split</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;appId=&quot;</span> <span class="o">+</span> <span class="n">app_id</span> <span class="o">+</span> <span class="n">url_split</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># the csv has several rows of metadata terminated by a row starting with &quot;VALUE&quot;.</span>
+    <span class="c1"># The data table starts on the next row.</span>
+    <span class="c1"># Put the metadata in a StringIO</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">as</span> <span class="n">estatresponse</span><span class="p">:</span> <span class="c1"># chunking in iter_lines doesn&#39;t work for stream=True</span>
+        <span class="k">if</span> <span class="n">estatresponse</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">estatresponse</span><span class="o">.</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span>
+        <span class="n">estatlines</span> <span class="o">=</span> <span class="n">estatresponse</span><span class="o">.</span><span class="n">iter_lines</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">decode_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">delete_on_close</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fheader</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">delete_on_close</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">inheader</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">colnum</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">estatlines</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">inheader</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+                        <span class="c1">#count columns</span>
+                        <span class="n">fields</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&quot;,&quot;&#39;</span><span class="p">,</span><span class="n">line</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">colnum</span> <span class="p">:</span>
+                            <span class="n">colnum</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span>
+                        <span class="n">fheader</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+                        <span class="n">fheader</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                        <span class="k">if</span><span class="p">(</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;&quot;VALUE&quot;&#39;</span><span class="p">)):</span>
+                            <span class="n">inheader</span> <span class="o">=</span> <span class="kc">False</span>
+                            <span class="n">fheader</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+                            <span class="n">fheader</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+                        <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">fheader</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="n">fp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+                <span class="n">dfHeader</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fheader</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">colnum</span><span class="p">))</span>
+                <span class="n">dfHeader</span> <span class="o">=</span> <span class="n">dfHeader</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">)</span>
+                <span class="n">dfMain</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fp</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+                <span class="n">result</span><span class="p">[</span><span class="s1">&#39;Description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span>
+                <span class="n">result</span><span class="p">[</span><span class="s1">&#39;Header&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfHeader</span>
+                <span class="n">result</span><span class="p">[</span><span class="s1">&#39;Main&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfMain</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+
+<span class="n">dfs</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="n">enurl</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Description&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Header&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2026-03-02 14:20:26.686850
+                       0                                                  1  \
+0                 RESULT                                                NaN
+1                 STATUS                                                  0
+2              ERROR_MSG       The process has been successfully completed.
+3                   DATE                      2026-03-02T14:20:27.122+09:00
+4             RESULT_INF                                                NaN
+5           TOTAL_NUMBER                                               4680
+6            FROM_NUMBER                                                  1
+7              TO_NUMBER                                               4680
+8              TABLE_INF                                         0003005798
+9              STAT_NAME                                           00200531
+10               GOV_ORG                                              00200
+11       STATISTICS_NAME  Labour Force Survey Basic Tabulation Whole Jap...
+12                 TITLE                                              1-1-1
+13                 CYCLE                                            Monthly
+14           SURVEY_DATE                                                  0
+15             OPEN_DATE                                         2026-01-30
+16            SMALL_AREA                                                  0
+17          COLLECT_AREA                                         Nationwide
+18         MAIN_CATEGORY                                                 03
+19          SUB_CATEGORY                                                 01
+20  OVERALL_TOTAL_NUMBER                                               4680
+21          UPDATED_DATE                                         2026-02-26
+22  STATISTICS_NAME_SPEC                                Labour Force Survey
+23           DESCRIPTION                                                NaN
+24            TITLE_SPEC                                                NaN
+25                  NOTE                                                  *
+26                  NOTE                                                ***
+27                  NOTE                                                  0
+28                  NOTE                                                  …
+29                 VALUE                                                NaN
+
+                                                    2            3        4
+0                                                 NaN          NaN      NaN
+1                                                 NaN          NaN      NaN
+2                                                 NaN          NaN      NaN
+3                                                 NaN          NaN      NaN
+4                                                 NaN          NaN      NaN
+5                                                 NaN          NaN      NaN
+6                                                 NaN          NaN      NaN
+7                                                 NaN          NaN      NaN
+8                                                 NaN          NaN      NaN
+9                                 Labour Force Survey          NaN      NaN
+10    Ministry of Internal Affairs and Communications          NaN      NaN
+11                                                NaN          NaN      NaN
+12  Population of 15 years old and over by labour ...          NaN      NaN
+13                                                NaN          NaN      NaN
+14                                                NaN          NaN      NaN
+15                                                NaN          NaN      NaN
+16                                                NaN          NaN      NaN
+17                                                NaN          NaN      NaN
+18                                    Labor and Wages          NaN      NaN
+19                                       Labour Force          NaN      NaN
+20                                                NaN          NaN      NaN
+21                                                NaN          NaN      NaN
+22                                   Basic Tabulation  Whole Japan  Monthly
+23  Since 1982, the benchmark population for calcu...          NaN      NaN
+24  Population of 15 years old and over by labour ...          NaN      NaN
+25  The ratio is not calculated because the denomi...          NaN      NaN
+26  Figures don&#39;t exist or is not tabulated (Since...          NaN      NaN
+27  Figures sre less than half of the given unit (...          NaN      NaN
+28  Figures covering from March through August 201...          NaN      NaN
+29                                                NaN          NaN      NaN
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Main&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+      tab_code Tabulated variable  cat01_code        Industry  cat02_code  \
+0            1      Actual number           0  All industries           0
+1            1      Actual number           0  All industries           0
+2            1      Actual number           0  All industries           0
+3            1      Actual number           0  All industries           0
+4            1      Actual number           0  All industries           0
+...        ...                ...         ...             ...         ...
+4675         1      Actual number           0  All industries           9
+4676         1      Actual number           0  All industries           9
+4677         1      Actual number           0  All industries           9
+4678         1      Actual number           0  All industries           9
+4679         1      Actual number           0  All industries           9
+
+                     Labour force status  cat03_code         Sex  area_code  \
+0     Population of 15 years old or more           0  Both sexes          0
+1     Population of 15 years old or more           0  Both sexes          0
+2     Population of 15 years old or more           0  Both sexes          0
+3     Population of 15 years old or more           0  Both sexes          0
+4     Population of 15 years old or more           0  Both sexes          0
+...                                  ...         ...         ...        ...
+4675                 Not in labour force           2      Female          0
+4676                 Not in labour force           2      Female          0
+4677                 Not in labour force           2      Female          0
+4678                 Not in labour force           2      Female          0
+4679                 Not in labour force           2      Female          0
+
+           Area   time_code Time (Monthly)                  unit  value  \
+0     All Japan  2000000101      Jan. 2000  ten thousand persons  10815
+1     All Japan  2000000202      Feb. 2000  ten thousand persons  10818
+2     All Japan  2000000303      Mar. 2000  ten thousand persons  10820
+3     All Japan  2000000404      Apr. 2000  ten thousand persons  10815
+4     All Japan  2000000505       May 2000  ten thousand persons  10829
+...         ...         ...            ...                   ...    ...
+4675  All Japan  2025000808      Aug. 2025  ten thousand persons   2450
+4676  All Japan  2025000909      Sep. 2025  ten thousand persons   2435
+4677  All Japan  2025001010      Oct. 2025  ten thousand persons   2435
+4678  All Japan  2025001111      Nov. 2025  ten thousand persons   2438
+4679  All Japan  2025001212      Dec. 2025  ten thousand persons   2462
+
+      annotation
+0            NaN
+1            NaN
+2            NaN
+3            NaN
+4            NaN
+...          ...
+4675         NaN
+4676         NaN
+4677         NaN
+4678         NaN
+4679         NaN
+
+[4680 rows x 15 columns]
+</pre></div></div>
+</div>
+</section>
+<section id="Observations">
+<h2>Observations<a class="headerlink" href="#Observations" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The metadata should be kept with the table. The pandas DataFrame has an experimental <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.attrs.html">attributes member</a>, but it doesn’t appear to be suitable and may change without warning.</p></li>
+<li><p>One option is to create a class with the metadata as a <code class="docutils literal notranslate"><span class="pre">dict</span></code> and table as a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>. See <a class="reference external" href="https://typing.python.org/en/latest/spec/class-compat.html#classvar">class type assignability</a>.</p></li>
+</ul>
+</section>
+<section id="References">
+<h2>References<a class="headerlink" href="#References" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id2">
+<div role="list" class="citation-list">
+<div class="citation" id="id7" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">cocosan23</a><span class="fn-bracket">]</span></span>
+<p>cocosan. Python apuri: seifu tokei e-stat wo shigoto ni ikase! <a class="reference external" href="https://www.youtube.com/watch?v=hiaK-jTXpCI">https://www.youtube.com/watch?v=hiaK-jTXpCI</a>, 2023.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">estatjp development chronicle</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="DevAPI02.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">DevAPI02.ipynb: Exception handling for <code class="docutils literal notranslate"><span class="pre">estatpy.api.get_csv_data()</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Check-for-required-packages">Check for required packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Obtain-and-save-API-appId">Obtain and save API appId</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Define-the-get_data(url)-function">Define the <code class="docutils literal notranslate"><span class="pre">get_data(url)</span></code> function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Work-around-for-metadata-in-csv-stream">Work-around for metadata in csv stream</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Observations">Observations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#References">References</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/chronicle/DevAPI01.ipynb.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Copyright © 2026 Alan Engel.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to estatjp’s Documentation &#8212; estatjp  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="estatjp development chronicle" href="chronicle/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.0.6a5" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">estatjp  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="#">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="chronicle/index.html">
+    Chronicle
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="autoapi/index.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="#">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="chronicle/index.html">
+    Chronicle
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="autoapi/index.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="welcome-to-estatjp-s-documentation">
+<h1>Welcome to estatjp’s Documentation<a class="headerlink" href="#welcome-to-estatjp-s-documentation" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chronicle/index.html">Chronicle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chronicle/DevAPI01.html">DevAPI01.ipynb: Developing <code class="docutils literal notranslate"><span class="pre">estatpy.api.get_csv_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="chronicle/DevAPI02.html">DevAPI02.ipynb: Exception handling for <code class="docutils literal notranslate"><span class="pre">estatpy.api.get_csv_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoapi/estatjp/index.html">estatjp</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>[E-Stat](<a class="reference external" href="https://www.e-stat.go.jp/en">https://www.e-stat.go.jp/en</a>) is a widely used portal site for
+accessing Japanese governmental statistical data. Began operation in
+2008. e-Stat currently hosts [744 surveys (1,688,550 datasets) in
+Japanese](<a class="reference external" href="https://www.e-stat.go.jp/stat-search?page=1">https://www.e-stat.go.jp/stat-search?page=1</a>) from about 30
+governmental agencies with [56 surveys (292,856 datasets) available in
+English](<a class="reference external" href="https://www.e-stat.go.jp/en/stat-search?page=1">https://www.e-stat.go.jp/en/stat-search?page=1</a>). These
+collections contain ‘databases’ and files (mainly Excel files). The
+‘databases’ can be accessed via an API. API urls can cover entire
+databases or subsets that can be tailored to users’ individual needs.</p>
+<p>The objective of the <cite>estatjp`</cite> Python
+package is to provide access to the e-Stat portal and return datasets in
+<cite>pandas.DataFrame`</cite> format.</p>
+<p>For example, the e-Stat API returns CSV streams that contain headers
+with metadata. These headers interfere with
+<cite>pandas.get_csv</cite>. The first release of
+estatjp returns a dictionary that contains the header and main table as
+separate dataframes.</p>
+</section>
+<section id="state-of-the-package">
+<h2>State of the Package<a class="headerlink" href="#state-of-the-package" title="Link to this heading">#</a></h2>
+<p>This first release contains only one function <a class="reference external" href="autoapi/estatjp/api/index.html#estatjp.api.get_csv_data">estatjp.api.get_csv_data()</a>, which retrieves a CSV stream from e-Stat using a user-supplied API url and returns a [pandas.DataFrame](<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html</a>).</p>
+</section>
+<section id="requirement">
+<h2>Requirement<a class="headerlink" href="#requirement" title="Link to this heading">#</a></h2>
+<p>The e-Stat API requires an application ID that can be obtained from the
+[E-Stat API](<a class="reference external" href="https://www.e-stat.go.jp/api/en">https://www.e-stat.go.jp/api/en</a>) page. Install this ID into
+your project by setting your terminal to your project root and running
+the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">dotenv</span>
+<span class="n">dotenv</span> <span class="nb">set</span> <span class="n">ESTAT_APP_ID</span> <span class="n">your</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="nb">id</span>
+</pre></div>
+</div>
+</section>
+<section id="install-this-package">
+<h2>Install this package<a class="headerlink" href="#install-this-package" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">estatjp</span>
+</pre></div>
+</div>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
+<section id="also-install-the-following">
+<h3>Also install the following<a class="headerlink" href="#also-install-the-following" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">dotenv</span>
+</pre></div>
+</div>
+<p>This example downloads an English dataset, the [Labour Force Survey
+Basic Tabulation Whole Japan Monthly table Population of 15 years old
+and over by labour force status](<a class="reference external" href="https://www.e-stat.go.jp/en/dbview?sid=0003005798">https://www.e-stat.go.jp/en/dbview?sid=0003005798</a>). The API url
+for that table is assigned to <cite>enurl`</cite>
+below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">estatjp</span><span class="w"> </span><span class="kn">import</span> <span class="n">api</span>
+<span class="n">enurl</span> <span class="o">=</span> <span class="s1">&#39;http://api.e-stat.go.jp/rest/3.0/app/getSimpleStatsData?appId=&amp;lang=E&amp;statsDataId=0003005798&amp;metaGetFlg=Y&amp;cntGetFlg=N&amp;explanationGetFlg=Y&amp;annotationGetFlg=Y&amp;sectionHeaderFlg=1&amp;replaceSpChars=0&#39;</span>
+<span class="n">dfs</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_csv_data</span><span class="p">(</span><span class="n">enurl</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Header&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Main&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dfs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Description&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Link to this heading">#</a></h2>
+<div class="references csl-bib-body hanging-indent docutils container" id="refs">
+<div class="csl-entry docutils container" id="ref-ashizawa2022estat-en">
+<p>Ashikawa, Souta, Matsuda, Junichi, &amp; Osone, Tadashi. (2022).
+Method for improving the recall in e-stat data search.
+<em>Proceedings of Annual Conference of the Information Systems
+Society in Japan ISSJ2022</em>, S1–C1.
+<a class="reference external" href="https://doi.org/10.19014/proceedingsissj.18.0_S1-C1">https://doi.org/10.19014/proceedingsissj.18.0_S1-C1</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-ashizawa2023estat-en">
+<p>Ashikawa, Souta, Matsuda, Junichi, &amp; Osone, Tadashi. (2023).
+Development of front-end search system improving recall in e-stat.
+<em>Proceedings of Annual Conference of the Information Systems
+Society in Japan ISSJ2023</em>, 1–6.
+<a class="reference external" href="https://doi.org/10.19014/proceedingsissj.19.0_P001">https://doi.org/10.19014/proceedingsissj.19.0_P001</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-cocosan2023python-en">
+<p>cocosan. (2023). <em>Python apuri: Seifu tokei e-stat wo shigoto ni
+ikase!</em> <a class="reference external" href="https://www.youtube.com/watch?v=hiaK-jTXpCI">https://www.youtube.com/watch?v=hiaK-jTXpCI</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-higashi2024incidence">
+<p>Higashi, Takahiro, &amp; Kurokawa, Yukinori. (2024). Incidence,
+mortality, survival, and treatment statistics of cancers in
+digestive organs—japanese cancer statistics 2024. <em>Annals of
+Gastroenterological Surgery</em>, <em>8</em>(6), 958–965.
+<a class="reference external" href="https://doi.org/10.1002/ags3.12835">https://doi.org/10.1002/ags3.12835</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-inoue2023self">
+<p>Inoue, Takao. (2023). A self-made tutorial for GitHub flavored
+markdown (GFM), and its source codes. <em>ResearchGate</em>.
+<a class="reference external" href="https://www.researchgate.net/publication/370937551_A_self-made_tutorial_for_GitHub_Flavored_Markdown_GFM_and_its_source_codes">https://www.researchgate.net/publication/370937551_A_self-made_tutorial_for_GitHub_Flavored_Markdown_GFM_and_its_source_codes</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-kato2021residential">
+<p>Kato, Haruka, &amp; Takizawa, Atsushi. (2021). Which residential
+clusters of walkability affect future population from the
+perspective of real estate prices in the osaka metropolitan area?
+<em>Sustainability</em>, <em>13</em>(23), 13413.
+<a class="reference external" href="https://doi.org/10.3390/su132313413">https://doi.org/10.3390/su132313413</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-masui2021r-en">
+<p>Masui, Toshikatsu. (2021). <em>R to python de manabu tokeigaku
+nyumon</em>. Ohmsha.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-estat2016adaptor">
+<p>National Statistics Center, Japan. (2016). <em>Chukan apuri</em>.
+<a class="github reference external" href="https://github.com/e-stat-api/adaptor">e-stat-api/adaptor</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-nishimura2017linked-en">
+<p>Nishimura, Shoki. (2017). Providing statistical data by linked
+open data (LOD): Innovative official statistical data (e-stat)
+dissemination. <em>Joho Kanri</em>, <em>59</em>(12), 812–821.
+<a class="reference external" href="https://doi.org/10.1241/johokanri.59.812">https://doi.org/10.1241/johokanri.59.812</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-seki2023social">
+<p>Seki, Katsunori. (2023). Social identification and redistribution
+preference: A survey experiment in japan. <em>Social Science Japan
+Journal</em>, <em>26</em>(1), 47–60. <a class="reference external" href="https://doi.org/10.1093/ssjj/jyac029">https://doi.org/10.1093/ssjj/jyac029</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-takahashi2022estat-en">
+<p>Takahashi, Shūichiro. (2022). <em>E-stat to nakayokusuru hon: Python
+to ōpun deta de nihon wo bunseki suru! API keiyu de seifu tōkei wo
+shutoku! katsuyo!</em> Impress R&amp;D.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-wakabayashi2015public-en">
+<p>Wakabayashi, Chihiro, Shinmura, Hiromi, Ando, Miri, Shimada,
+Masako, &amp; Yanagawa, Hiroshi. (2015). Kōeisei topikksu dai 13 kai
+seifutōkei no sōgōmadoguchi e-stat: Chiiki shindan he no katsuyō -
+jissen herusu puromōshon. <em>Gekkan Chiiki Igaku</em>, <em>29</em>(2), 52.
+<a class="reference external" href="https://doi.org/10.60261/chiikiigaku.29.2_52">https://doi.org/10.60261/chiikiigaku.29.2_52</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-ashizawa2022estat-ja">
+<p>芦澤颯太, 松田純一, &amp; 大曽根匡. (2022). E-stat
+での統計データ検索におけるいくつかの課題抽出とその解決方法の提案.
+<em>情報システム学会 全国大会論文集 ISSJ2022</em>, S1–C1.
+<a class="reference external" href="https://doi.org/10.19014/proceedingsissj.18.0_S1-C1">https://doi.org/10.19014/proceedingsissj.18.0_S1-C1</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-ashizawa2023estat-ja">
+<p>芦澤颯太, 松田純一, &amp; 大曽根匡. (2023). E-stat
+における検索漏れを抑止する情報システムの開発とその検証.
+<em>情報システム学会 全国大会論文集 情報システム学会</em>, 1–6.
+<a class="reference external" href="https://doi.org/10.19014/proceedingsissj.19.0_P001">https://doi.org/10.19014/proceedingsissj.19.0_P001</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-wakabayashi2015public-ja">
+<p>若林チヒロ, 新村洋未, 安藤実里, 嶋田雅子, &amp; 柳川洋. (2015).
+公衆衛生トピックス 第 13 回 政府統計の総合窓口
+e-stat-地域診断への活用-実践ヘルスプロモーション. <em>月刊地域医学</em>,
+<em>29</em>(2), 52. <a class="reference external" href="https://doi.org/10.60261/chiikiigaku.29.2_52">https://doi.org/10.60261/chiikiigaku.29.2_52</a></p>
+</div>
+<div class="csl-entry docutils container" id="ref-nishimura2017linked-ja">
+<p>西村正貴. (2017). Linked open data (LOD) による統計データの提供:
+政府統計データ (e-stat) の新しい形. <em>情報管理</em>, <em>59</em>(12),
+812–821. <a class="reference external" href="https://doi.org/10.1241/johokanri.59.812">https://doi.org/10.1241/johokanri.59.812</a></p>
+</div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="chronicle/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">estatjp development chronicle</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-of-the-package">State of the Package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirement">Requirement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-this-package">Install this package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#also-install-the-following">Also install the following</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Copyright © 2026 Alan Engel.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

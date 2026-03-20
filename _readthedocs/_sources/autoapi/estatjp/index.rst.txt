@@ -1,0 +1,23 @@
+estatjp
+=======
+
+.. py:module:: estatjp
+
+.. autoapi-nested-parse::
+
+   The `E-Stat`_ portal site contains 'databases' that can be accessed via API urls or downloads as XML, CSV and JSON files, and files (mainly Excel files) that can be downloaded. This package will eventually provide for converting these into `pandas DataFrames`_. This early release handles only API url calls with CSV downloads.
+
+   .. _E-Stat: https://www.e-stat.go.jp/en
+   .. _pandas DataFrames: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html
+
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/estatjp/api/index
+
+
