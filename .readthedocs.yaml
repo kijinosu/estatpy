@@ -3,7 +3,7 @@
 version: 2
 formats: [htmlzip]
 sphinx:
-  configuration: source/conf.py
+  configuration: docs/conf.py
 python:
   install:
     - requirements: requirements.txt
@@ -17,5 +17,5 @@ build:
     - pip install nbsphinx
     - pip install sphinxcontrib.bibtex
     # Make sure RTD can find the html output
-    - sphinx-apidoc -f -o docs/source src/estatpy
+    - sphinx-apidoc -f -o docs src/estatjp
     - sphinx-build -M html docs/ _readthedocs/
