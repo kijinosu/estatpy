@@ -37,18 +37,10 @@ jobs:
           # You can modify what version of Python you want to use for your release
           python-version: "3.14"
 
-      - name: Install myst parser
-        run: |
-            python -m pip install myst-parser
-
-      - name: Install nbsphinx
-        run: |
-            python -m pip install nbsphinx
-
-      - name: Install hatch
+      - name: Install dependencies
         run: |
             python -m pip install --upgrade pip
-            python -m pip install hatch
+            python -m pip install -r requirements.txt
 
       - name: Build package using Hatch
         run: |
