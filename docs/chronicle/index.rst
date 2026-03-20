@@ -12,7 +12,7 @@ This folder contains Jupyter notebooks created in the development of `estatjp`.
    :maxdepth: 1
    :caption: Contents:
 
-   DevAPI01.ipynb
+
 
 ## DevAPI01.ipynb
 
