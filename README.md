@@ -10,15 +10,13 @@ collections contain 'databases' and files (mainly Excel files). The
 'databases' can be accessed via an API. API urls can cover entire
 databases or subsets that can be tailored to users' individual needs.
 
-The objective of the <span class="title-ref">estatjp</span> Python
-package is to provide access to the e-Stat portal and return datasets in
-<span class="title-ref">pandas.DataFrame</span> format.
+The objective of the estatjp Python package is to provide access to the
+e-Stat portal and return datasets in pandas.DataFrame format.
 
 For example, the e-Stat API returns CSV streams that contain headers
-with metadata. These headers interfere with
-<span class="title-ref">pandas.get_csv</span>. The first release of
-estatjp returns a dictionary that contains the header and main table as
-separate dataframes.
+with metadata. These headers interfere with pandas.get_csv. The first
+release of estatjp returns a dictionary that contains the header and
+main table as separate dataframes.
 
 ## Requirement
 
@@ -40,8 +38,7 @@ This example downloads an English dataset, the [Labour Force Survey
 Basic Tabulation Whole Japan Monthly table Population of 15 years old
 and over by labour force
 status](https://www.e-stat.go.jp/en/dbview?sid=0003005798). The API url
-for that table is assigned to <span class="title-ref">enurl</span>
-below.
+for that table is assigned to enurl below.
 
 ``` python
 import pandas
@@ -56,10 +53,9 @@ print(dfs.get('Description'))
 
 # References
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0" line-spacing="2">
+<div id="refs" class="container references csl-bib-body hanging-indent">
 
-<div id="ref-ashizawa2022estat.en" class="csl-entry">
+<div id="ref-ashizawa2022estat.en" class="container csl-entry">
 
 Ashikawa, Souta, Matsuda, Junichi, & Osone, Tadashi. (2022). Method for
 improving the recall in e-stat data search. *Proceedings of Annual
@@ -68,7 +64,7 @@ Conference of the Information Systems Society in Japan ISSJ2022*, S1–C1.
 
 </div>
 
-<div id="ref-ashizawa2023estat.en" class="csl-entry">
+<div id="ref-ashizawa2023estat.en" class="container csl-entry">
 
 Ashikawa, Souta, Matsuda, Junichi, & Osone, Tadashi. (2023). Development
 of front-end search system improving recall in e-stat. *Proceedings of
@@ -77,15 +73,14 @@ Annual Conference of the Information Systems Society in Japan ISSJ2023*,
 
 </div>
 
-<div id="ref-cocosan2023python.en" class="csl-entry">
+<div id="ref-cocosan2023python.en" class="container csl-entry">
 
-<span class="nocase">cocosan</span>. (2023). *Python apuri: Seifu tokei
-e-stat wo shigoto ni ikase!*
+cocosan. (2023). *Python apuri: Seifu tokei e-stat wo shigoto ni ikase!*
 <https://www.youtube.com/watch?v=hiaK-jTXpCI>.
 
 </div>
 
-<div id="ref-higashi2024incidence" class="csl-entry">
+<div id="ref-higashi2024incidence" class="container csl-entry">
 
 Higashi, Takahiro, & Kurokawa, Yukinori. (2024). Incidence, mortality,
 survival, and treatment statistics of cancers in digestive
@@ -94,7 +89,7 @@ Surgery*, *8*(6), 958–965. <https://doi.org/10.1002/ags3.12835>
 
 </div>
 
-<div id="ref-inoue2023self" class="csl-entry">
+<div id="ref-inoue2023self" class="container csl-entry">
 
 Inoue, Takao. (2023). A self-made tutorial for GitHub flavored markdown
 (GFM), and its source codes. *ResearchGate*.
@@ -102,7 +97,7 @@ Inoue, Takao. (2023). A self-made tutorial for GitHub flavored markdown
 
 </div>
 
-<div id="ref-kato2021residential" class="csl-entry">
+<div id="ref-kato2021residential" class="container csl-entry">
 
 Kato, Haruka, & Takizawa, Atsushi. (2021). Which residential clusters of
 walkability affect future population from the perspective of real estate
@@ -111,21 +106,21 @@ prices in the osaka metropolitan area? *Sustainability*, *13*(23),
 
 </div>
 
-<div id="ref-masui2021r.en" class="csl-entry">
+<div id="ref-masui2021r.en" class="container csl-entry">
 
 Masui, Toshikatsu. (2021). *R to python de manabu tokeigaku nyumon*.
 Ohmsha.
 
 </div>
 
-<div id="ref-estat2016adaptor" class="csl-entry">
+<div id="ref-estat2016adaptor" class="container csl-entry">
 
 National Statistics Center, Japan. (2016). *Chukan apuri*.
 <https://github.com/e-stat-api/adaptor>.
 
 </div>
 
-<div id="ref-nishimura2017linked.en" class="csl-entry">
+<div id="ref-nishimura2017linked.en" class="container csl-entry">
 
 Nishimura, Shoki. (2017). Providing statistical data by linked open data
 (LOD): Innovative official statistical data (e-stat) dissemination.
@@ -134,7 +129,7 @@ Nishimura, Shoki. (2017). Providing statistical data by linked open data
 
 </div>
 
-<div id="ref-seki2023social" class="csl-entry">
+<div id="ref-seki2023social" class="container csl-entry">
 
 Seki, Katsunori. (2023). Social identification and redistribution
 preference: A survey experiment in japan. *Social Science Japan
@@ -142,7 +137,7 @@ Journal*, *26*(1), 47–60. <https://doi.org/10.1093/ssjj/jyac029>
 
 </div>
 
-<div id="ref-takahashi2022estat.en" class="csl-entry">
+<div id="ref-takahashi2022estat.en" class="container csl-entry">
 
 Takahashi, Shūichiro. (2022). *E-stat to nakayokusuru hon: Python to
 ōpun deta de nihon wo bunseki suru! API keiyu de seifu tōkei wo shutoku!
@@ -150,7 +145,7 @@ katsuyo!* Impress R&D.
 
 </div>
 
-<div id="ref-wakabayashi2015public.en" class="csl-entry">
+<div id="ref-wakabayashi2015public.en" class="container csl-entry">
 
 Wakabayashi, Chihiro, Shinmura, Hiromi, Ando, Miri, Shimada, Masako, &
 Yanagawa, Hiroshi. (2015). Kōeisei topikksu dai 13 kai seifutōkei no
@@ -160,7 +155,7 @@ puromōshon. *Gekkan Chiiki Igaku*, *29*(2), 52.
 
 </div>
 
-<div id="ref-ashizawa2022estat.ja" class="csl-entry">
+<div id="ref-ashizawa2022estat.ja" class="container csl-entry">
 
 芦澤颯太, 松田純一, & 大曽根匡. (2022). E-stat
 での統計データ検索におけるいくつかの課題抽出とその解決方法の提案.
@@ -169,7 +164,7 @@ puromōshon. *Gekkan Chiiki Igaku*, *29*(2), 52.
 
 </div>
 
-<div id="ref-ashizawa2023estat.ja" class="csl-entry">
+<div id="ref-ashizawa2023estat.ja" class="container csl-entry">
 
 芦澤颯太, 松田純一, & 大曽根匡. (2023). E-stat
 における検索漏れを抑止する情報システムの開発とその検証.
@@ -178,7 +173,7 @@ puromōshon. *Gekkan Chiiki Igaku*, *29*(2), 52.
 
 </div>
 
-<div id="ref-wakabayashi2015public.ja" class="csl-entry">
+<div id="ref-wakabayashi2015public.ja" class="container csl-entry">
 
 若林チヒロ, 新村洋未, 安藤実里, 嶋田雅子, & 柳川洋. (2015).
 公衆衛生トピックス 第 13 回 政府統計の総合窓口
@@ -187,7 +182,7 @@ e-stat-地域診断への活用-実践ヘルスプロモーション. *月刊地
 
 </div>
 
-<div id="ref-nishimura2017linked.ja" class="csl-entry">
+<div id="ref-nishimura2017linked.ja" class="container csl-entry">
 
 西村正貴. (2017). Linked open data (LOD) による統計データの提供:
 政府統計データ (e-stat) の新しい形. *情報管理*, *59*(12), 812–821.
