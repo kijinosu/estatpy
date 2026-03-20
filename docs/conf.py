@@ -24,7 +24,7 @@ html_show_sphinx = False
 try:
     version = importlib.metadata.version("estatjp")
 except importlib.metadata.PackageNotFoundError:
-    version = "0.0.0"
+    version = "v0.1.1"
 
 # -- General configuration -----------------------------------------------------
 
@@ -34,7 +34,7 @@ except importlib.metadata.PackageNotFoundError:
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     "nbsphinx",
-    "myst_parser",
+    # "myst_parser",
     "sphinx_design",
     "sphinx_copybutton",
     "sphinx.ext.intersphinx",
@@ -42,6 +42,7 @@ extensions = [
     # This allows you to create :::{todo} sections that will not be rendered
     # in the live docs if you want to leave notes for future work in the docs
     "sphinx.ext.todo",
+    "sphinx.ext.autodoc",
     # Auto generate docs
     "autoapi.extension",
     "sphinxcontrib.bibtex"
