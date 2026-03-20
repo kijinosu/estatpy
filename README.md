@@ -1,5 +1,7 @@
 # estatjp
 
+[![image](https://zenodo.org/badge/DOI/10.5281/zenodo.19124886.svg)](https://doi.org/10.5281/zenodo.19124885)
+
 [E-Stat](https://www.e-stat.go.jp/en) is a widely used portal site for
 accessing Japanese governmental statistical data. Began operation in
 2008. e-Stat currently hosts [744 surveys (1,688,550 datasets) in
@@ -51,7 +53,7 @@ print(dfs.get('Main'))
 print(dfs.get('Description'))
 ```
 
-# References
+### References
 
 <div id="refs" class="container references csl-bib-body hanging-indent">
 
